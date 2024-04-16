@@ -11,7 +11,7 @@
     flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["x86_64-linux"];
       perSystem = {pkgs, ...}: {
-        devShells.fermyon-spin = import ./fermyon-spin {pkgs = pkgs;};
+        devShells.default = import ./fermyon-spin.nix {inherit pkgs;};
       };
     };
 }

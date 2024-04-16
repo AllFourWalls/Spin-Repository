@@ -1,5 +1,6 @@
-{
-  environment.systemPackages = [
-    pkgs.fermyon-spin
+{pkgs, ...}:
+pkgs.mkShell {
+  packages = with pkgs; [
+    fermyon-spin
   ];
 }
